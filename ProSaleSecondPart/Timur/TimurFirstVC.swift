@@ -11,19 +11,35 @@ import SnapKit
 final class TimurFirstVC: UIViewController {
     
     let models = [
-        Model(title: "Автозапчасти Алматы",
-              description: "7 лет на Kolesa.kz",
-              numberOfAdverts: "1000 объявлений"),
-        Model(title: "Автозапчасти Алматы",
-              description: "7 лет на Kolesa.kz",
-              numberOfAdverts: nil),
-        Model(title: "Автозапчасти Алматы",
-              description: "7 лет на Kolesa.kz",
-              numberOfAdverts: "1000 объявлений")
+        TypeModel(cabinetType: .dealer,
+                  title: "Автозапчасти Алматы",
+                  description: "7 лет на Kolesa.kz",
+                  numberOfAdverts: "1000 объявлений",
+                  needShowButton: true),
+        TypeModel(cabinetType: .pro,
+                  title: "Автозапчасти Алматы",
+                  description: "7 лет на Kolesa.kz"),
+        TypeModel(cabinetType: .dealer,
+                  title: "Автозапчасти Алматы",
+                  description: "7 лет на Kolesa.kz",
+                  numberOfAdverts: "1000 объявлений",
+                  needShowButton: true),
+        TypeModel(cabinetType: .dealer,
+                  title: "Автозапчасти Алматыmlbvkfmdblkgmfblkbmlkfmb",
+                  description: "99999999999999999999999 лет на Kolesa.kz",
+                  numberOfAdverts: "99999999999999999999999999999 объявлений",
+                  needShowButton: true),
+        TypeModel(cabinetType: .pro,
+                  title: "Автозапчасти klmlkmlkmlkmflkvfmbldfkbmlkdfbmАлматы",
+                  description: "99999999999999999999999999999 лет на Kolesa.kz")
     ]
     
     let cellId = "cellId"
-    private let tableView = UITableView()
+    private let tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.separatorStyle = .none
+        return tableView
+    }()
     
     override func loadView() {
         super.loadView()
@@ -53,6 +69,11 @@ extension TimurFirstVC: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+       switch models[indexPath.row].cabinetType {
+       case .dealer:
+           return 150
+       case .pro:
+           return 80
+        }
     }
 }
