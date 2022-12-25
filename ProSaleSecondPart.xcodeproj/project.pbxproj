@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		757226072958650A00A2552D /* DealerHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757226062958650A00A2552D /* DealerHeaderView.swift */; };
+		7572260B29586F3900A2552D /* SellerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7572260A29586F3900A2552D /* SellerViewController.swift */; };
 		75B62F322954AB86007A7C6C /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B62F312954AB86007A7C6C /* CustomTableViewCell.swift */; };
 		75B62F342954AF29007A7C6C /* TypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B62F332954AF29007A7C6C /* TypeModel.swift */; };
 		75B62F3A2955746C007A7C6C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B62F392955746C007A7C6C /* Color.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		757226062958650A00A2552D /* DealerHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealerHeaderView.swift; sourceTree = "<group>"; };
+		7572260A29586F3900A2552D /* SellerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerViewController.swift; sourceTree = "<group>"; };
 		75B62F312954AB86007A7C6C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		75B62F332954AF29007A7C6C /* TypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeModel.swift; sourceTree = "<group>"; };
 		75B62F392955746C007A7C6C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -92,7 +96,9 @@
 			isa = PBXGroup;
 			children = (
 				A2ED4D8029549B1100AA7099 /* TimurFirstVC.swift */,
+				757226062958650A00A2552D /* DealerHeaderView.swift */,
 				75B62F312954AB86007A7C6C /* CustomTableViewCell.swift */,
+				7572260A29586F3900A2552D /* SellerViewController.swift */,
 				75B62F332954AF29007A7C6C /* TypeModel.swift */,
 				75B62F432955B57C007A7C6C /* CabinetType.swift */,
 				75B62F402955AA23007A7C6C /* Extensions */,
@@ -193,7 +199,9 @@
 				A2ED4D66295496F700AA7099 /* AppDelegate.swift in Sources */,
 				75B62F3A2955746C007A7C6C /* Color.swift in Sources */,
 				A2ED4D68295496F700AA7099 /* SceneDelegate.swift in Sources */,
+				7572260B29586F3900A2552D /* SellerViewController.swift in Sources */,
 				A2ED4D7F29549AED00AA7099 /* NikolaiFirstVC.swift in Sources */,
+				757226072958650A00A2552D /* DealerHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

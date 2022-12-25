@@ -15,7 +15,8 @@ final class TimurFirstVC: UIViewController {
                   title: "Автозапчасти Алматы",
                   description: "7 лет на Kolesa.kz",
                   numberOfAdverts: "1000 объявлений",
-                  needShowButton: true),
+                  needShowButton: true,
+                  companyLogo: UIImage(named: "lexus")),
         TypeModel(cabinetType: .pro,
                   title: "Автозапчасти Алматы",
                   description: "7 лет на Kolesa.kz"),
@@ -23,12 +24,14 @@ final class TimurFirstVC: UIViewController {
                   title: "Автозапчасти Алматы",
                   description: "7 лет на Kolesa.kz",
                   numberOfAdverts: "1000 объявлений",
-                  needShowButton: true),
+                  needShowButton: true,
+                  companyLogo: UIImage(named: "Ellipse")),
         TypeModel(cabinetType: .dealer,
                   title: "Автозапчасти Алматыmlbvkfmdblkgmfblkbmlkfmb",
                   description: "99999999999999999999999 лет на Kolesa.kz",
                   numberOfAdverts: "99999999999999999999999999999 объявлений",
-                  needShowButton: true),
+                  needShowButton: true,
+                  companyLogo: UIImage(named: "toyota")),
         TypeModel(cabinetType: .pro,
                   title: "Автозапчасти klmlkmlkmlkmflkvfmbldfkbmlkdfbmАлматы",
                   description: "99999999999999999999999999999 лет на Kolesa.kz")
@@ -59,6 +62,12 @@ final class TimurFirstVC: UIViewController {
 }
 
 extension TimurFirstVC: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let destinationVC = SellerViewController()
+        destinationVC.configureVC(model: models[indexPath.row])
+        self.navigationController?.pushViewController(destinationVC, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return models.count
     }
