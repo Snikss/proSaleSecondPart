@@ -10,19 +10,6 @@ import SnapKit
 
 final class TimurFirstVC: UIViewController {
     
-    let models = [
-        SellerModel(id: 111,
-                    sellerId: 111,
-                    title: "Автозапчасти Алматы",
-                    subtitle: "7 лет на Kolesa.kz"),
-            SellerModel(id: 111,
-                        sellerId: 111,
-                        title: "Автозапчасти Алматы",
-                        subtitle: "7 лет на Kolesa.kz",
-                        advertsCount: "1000 объявлений",
-                        actionButton: "Страница продавца")
-    ]
-    
     let cellId = "cellId"
     private let tableView: UITableView = {
         let tableView = UITableView()
@@ -40,7 +27,7 @@ final class TimurFirstVC: UIViewController {
     
     func setupTableView() {
         view.addSubview(tableView)
-        tableView.register(SellerInfoTableViewCell.self, forCellReuseIdentifier: cellId)
+        tableView.register(SellerPageInfoCell.self, forCellReuseIdentifier: cellId)
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
@@ -48,19 +35,13 @@ final class TimurFirstVC: UIViewController {
 }
 
 extension TimurFirstVC: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let destinationVC = SellerViewController()
-        destinationVC.configureVC(model: models[indexPath.row])
-        self.navigationController?.pushViewController(destinationVC, animated: true)
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return models.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! SellerInfoTableViewCell
-        cell.configure(model: models[indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! SellerPageInfoCell
+        cell.configure(urlString: "lexus", title: "tetetet", subtitle: "reverver")
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
