@@ -11,30 +11,16 @@ import SnapKit
 final class TimurFirstVC: UIViewController {
     
     let models = [
-        TypeModel(cabinetType: .dealer,
-                  title: "Автозапчасти Алматы",
-                  description: "7 лет на Kolesa.kz",
-                  numberOfAdverts: "1000 объявлений",
-                  needShowButton: true,
-                  companyLogo: UIImage(named: "lexus")),
-        TypeModel(cabinetType: .pro,
-                  title: "Автозапчасти Алматы",
-                  description: "7 лет на Kolesa.kz"),
-        TypeModel(cabinetType: .dealer,
-                  title: "Автозапчасти Алматы",
-                  description: "7 лет на Kolesa.kz",
-                  numberOfAdverts: "1000 объявлений",
-                  needShowButton: true,
-                  companyLogo: UIImage(named: "Ellipse")),
-        TypeModel(cabinetType: .dealer,
-                  title: "Автозапчасти Алматыmlbvkfmdblkgmfblkbmlkfmb",
-                  description: "99999999999999999999999 лет на Kolesa.kz",
-                  numberOfAdverts: "99999999999999999999999999999 объявлений",
-                  needShowButton: true,
-                  companyLogo: UIImage(named: "toyota")),
-        TypeModel(cabinetType: .pro,
-                  title: "Автозапчасти klmlkmlkmlkmflkvfmbldfkbmlkdfbmАлматы",
-                  description: "99999999999999999999999999999 лет на Kolesa.kz")
+        SellerModel(id: 111,
+                    sellerId: 111,
+                    title: "Автозапчасти Алматы",
+                    subtitle: "7 лет на Kolesa.kz"),
+            SellerModel(id: 111,
+                        sellerId: 111,
+                        title: "Автозапчасти Алматы",
+                        subtitle: "7 лет на Kolesa.kz",
+                        advertsCount: "1000 объявлений",
+                        actionButton: "Страница продавца")
     ]
     
     let cellId = "cellId"
@@ -54,7 +40,7 @@ final class TimurFirstVC: UIViewController {
     
     func setupTableView() {
         view.addSubview(tableView)
-        tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: cellId)
+        tableView.register(SellerInfoTableViewCell.self, forCellReuseIdentifier: cellId)
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
@@ -73,16 +59,11 @@ extension TimurFirstVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! CustomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! SellerInfoTableViewCell
         cell.configure(model: models[indexPath.row])
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-       switch models[indexPath.row].cabinetType {
-       case .dealer:
-           return 150
-       case .pro:
-           return 80
-        }
+        UITableView.automaticDimension
     }
 }

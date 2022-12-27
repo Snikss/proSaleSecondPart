@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		757226072958650A00A2552D /* DealerHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757226062958650A00A2552D /* DealerHeaderView.swift */; };
 		7572260B29586F3900A2552D /* SellerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7572260A29586F3900A2552D /* SellerViewController.swift */; };
-		75B62F322954AB86007A7C6C /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B62F312954AB86007A7C6C /* CustomTableViewCell.swift */; };
-		75B62F342954AF29007A7C6C /* TypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B62F332954AF29007A7C6C /* TypeModel.swift */; };
+		757226152959EF0D00A2552D /* UIView+RoundSelectCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = 757226142959EF0D00A2552D /* UIView+RoundSelectCorners.m */; };
+		75B62F322954AB86007A7C6C /* SellerInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B62F312954AB86007A7C6C /* SellerInfoTableViewCell.swift */; };
+		75B62F342954AF29007A7C6C /* SellerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B62F332954AF29007A7C6C /* SellerModel.swift */; };
 		75B62F3A2955746C007A7C6C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B62F392955746C007A7C6C /* Color.swift */; };
 		75B62F442955B57C007A7C6C /* CabinetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B62F432955B57C007A7C6C /* CabinetType.swift */; };
 		A2ED4D66295496F700AA7099 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED4D65295496F700AA7099 /* AppDelegate.swift */; };
@@ -26,8 +27,11 @@
 /* Begin PBXFileReference section */
 		757226062958650A00A2552D /* DealerHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealerHeaderView.swift; sourceTree = "<group>"; };
 		7572260A29586F3900A2552D /* SellerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerViewController.swift; sourceTree = "<group>"; };
-		75B62F312954AB86007A7C6C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		75B62F332954AF29007A7C6C /* TypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeModel.swift; sourceTree = "<group>"; };
+		757226142959EF0D00A2552D /* UIView+RoundSelectCorners.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+RoundSelectCorners.m"; sourceTree = "<group>"; };
+		757226162959EF2800A2552D /* UIView+RoundSelectCorners.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+RoundSelectCorners.h"; sourceTree = "<group>"; };
+		757226182959EFE300A2552D /* ProSaleSecondPart-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProSaleSecondPart-Bridging-Header.h"; sourceTree = "<group>"; };
+		75B62F312954AB86007A7C6C /* SellerInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerInfoTableViewCell.swift; sourceTree = "<group>"; };
+		75B62F332954AF29007A7C6C /* SellerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerModel.swift; sourceTree = "<group>"; };
 		75B62F392955746C007A7C6C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		75B62F432955B57C007A7C6C /* CabinetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabinetType.swift; sourceTree = "<group>"; };
 		A2ED4D62295496F700AA7099 /* ProSaleSecondPart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProSaleSecondPart.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +60,8 @@
 		75B62F402955AA23007A7C6C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				757226142959EF0D00A2552D /* UIView+RoundSelectCorners.m */,
+				757226162959EF2800A2552D /* UIView+RoundSelectCorners.h */,
 				75B62F392955746C007A7C6C /* Color.swift */,
 			);
 			path = Extensions;
@@ -64,6 +70,7 @@
 		A2ED4D59295496F700AA7099 = {
 			isa = PBXGroup;
 			children = (
+				757226182959EFE300A2552D /* ProSaleSecondPart-Bridging-Header.h */,
 				A2ED4D64295496F700AA7099 /* ProSaleSecondPart */,
 				A2ED4D63295496F700AA7099 /* Products */,
 			);
@@ -97,9 +104,9 @@
 			children = (
 				A2ED4D8029549B1100AA7099 /* TimurFirstVC.swift */,
 				757226062958650A00A2552D /* DealerHeaderView.swift */,
-				75B62F312954AB86007A7C6C /* CustomTableViewCell.swift */,
+				75B62F312954AB86007A7C6C /* SellerInfoTableViewCell.swift */,
 				7572260A29586F3900A2552D /* SellerViewController.swift */,
-				75B62F332954AF29007A7C6C /* TypeModel.swift */,
+				75B62F332954AF29007A7C6C /* SellerModel.swift */,
 				75B62F432955B57C007A7C6C /* CabinetType.swift */,
 				75B62F402955AA23007A7C6C /* Extensions */,
 			);
@@ -191,12 +198,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75B62F342954AF29007A7C6C /* TypeModel.swift in Sources */,
-				75B62F322954AB86007A7C6C /* CustomTableViewCell.swift in Sources */,
+				75B62F342954AF29007A7C6C /* SellerModel.swift in Sources */,
+				75B62F322954AB86007A7C6C /* SellerInfoTableViewCell.swift in Sources */,
 				A2ED4D8129549B1100AA7099 /* TimurFirstVC.swift in Sources */,
 				A2ED4D6A295496F700AA7099 /* StartViewController.swift in Sources */,
 				75B62F442955B57C007A7C6C /* CabinetType.swift in Sources */,
 				A2ED4D66295496F700AA7099 /* AppDelegate.swift in Sources */,
+				757226152959EF0D00A2552D /* UIView+RoundSelectCorners.m in Sources */,
 				75B62F3A2955746C007A7C6C /* Color.swift in Sources */,
 				A2ED4D68295496F700AA7099 /* SceneDelegate.swift in Sources */,
 				7572260B29586F3900A2552D /* SellerViewController.swift in Sources */,
@@ -359,6 +367,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ProSaleSecondPart-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -391,6 +400,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ProSaleSecondPart-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

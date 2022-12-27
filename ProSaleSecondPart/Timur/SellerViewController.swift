@@ -10,7 +10,7 @@ import SnapKit
 
 class SellerViewController: UIViewController {
     private let headerView = DealerHeaderView()
-    private var model: TypeModel?
+    private var model: SellerModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,12 +19,12 @@ class SellerViewController: UIViewController {
         setupViews()
     }
     
-    func configureVC(model: TypeModel?) {
+    func configureVC(model: SellerModel?) {
         self.model = model
     }
     
     private func setupViews() {
-        headerView.configure(model: model)
+//        headerView.configure(model: model)
         headerView.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
             make.top.equalTo(view.safeAreaLayoutGuide)

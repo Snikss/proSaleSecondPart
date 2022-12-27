@@ -38,11 +38,11 @@ class DealerHeaderView: UIView {
         return label
     }()
     
-    func configure(model: TypeModel?) {
+    func configure(model: SellerModel?) {
         guard let model else { return }
-        companyLogo.image = model.companyLogo
-        titleLabel.text = model.title
-        descriptionLabel.text = model.description
+//        companyLogo.image = model.companyLogo
+//        titleLabel.text = model.title
+//        descriptionLabel.text = model.description
         backgroundColor = .white
     }
     

@@ -11,7 +11,8 @@ import UIKit
 @objc public class Color: NSObject {
     @objc public static let whiteDarkest = UIColor(hexString: "#F2F2F3")
     @objc public static let bluePrimary = UIColor(hexString: "#2A81DD")
-    @objc public static let lineColor = UIColor(hexString: "#1C18191A")
+    @objc public static let grayLightest = UIColor(hexString: "#d4d4da")
+    @objc public static let gray = UIColor(hexString: "#888b94")
 }
 
 extension UIColor {
