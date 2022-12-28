@@ -10,9 +10,7 @@ import UIKit
 final class SellerPageScheduleCell: UITableViewCell {
     private enum Constants {
         static let arrowImage = "light_bracket"
-        static let locationLogo = "location_logo"
         static let titleFontSize: CGFloat = 16
-        static let numberOfLines = 1
         static let redCircle = "red_oval"
         static let greenCircle = "green_oval"
     }
@@ -26,14 +24,13 @@ final class SellerPageScheduleCell: UITableViewCell {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: Constants.titleFontSize)
+        label.font = .systemFont(ofSize: Constants.titleFontSize, weight: .regular)
         label.textAlignment = .left
-        label.numberOfLines = Constants.numberOfLines
         label.lineBreakMode = .byTruncatingTail
         return label
     }()
     
-    private lazy var arrowButton: UIButton = {
+    private let arrowButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: Constants.arrowImage), for: .normal)
         return button
@@ -42,10 +39,9 @@ final class SellerPageScheduleCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        self.selectionStyle = UITableViewCell.SelectionStyle.none
+        selectionStyle = .none
         setupSubview()
         setupConstraints()
-        
     }
     
     @available(*, unavailable)
@@ -75,7 +71,7 @@ final class SellerPageScheduleCell: UITableViewCell {
         titleLabel.snp.makeConstraints {
             $0.top.equalToSuperview().offset(10)
             $0.left.equalTo(workIndicator.snp.right).offset(16)
-            $0.right.equalTo(arrowButton.snp.left).offset(-24)
+            $0.right.equalTo(arrowButton.snp.left).offset(-22)
             $0.bottom.equalToSuperview().offset(-10)
         }
         

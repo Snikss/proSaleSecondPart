@@ -53,8 +53,8 @@ extension TimurFirstVC: UITableViewDataSource, UITableViewDelegate {
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.sellerPageScheduleCell,
                                                      for: indexPath) as! SellerPageScheduleCell
-            cell.configure(isOpen: false,
-                           title: "открыыто до 20:00")
+            cell.configure(isOpen: true,
+                           title: "Открыто до 20:00")
             return cell
         }
     }

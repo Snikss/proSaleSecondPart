@@ -8,12 +8,10 @@
 import UIKit
 
 final class SellePageLocationCell: UITableViewCell {
-    
     private enum Constants {
         static let arrowImage = "light_bracket"
         static let locationLogo = "location_logo"
         static let titleFontSize: CGFloat = 16
-        static let numberOfLines = 1
         static let subtitleFontSize: CGFloat = 13
     }
     
@@ -27,9 +25,8 @@ final class SellePageLocationCell: UITableViewCell {
     private let mainAddressLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: Constants.titleFontSize)
+        label.font = .systemFont(ofSize: Constants.titleFontSize, weight: .regular)
         label.textAlignment = .left
-        label.numberOfLines = Constants.numberOfLines
         label.lineBreakMode = .byTruncatingTail
         return label
     }()
@@ -37,14 +34,13 @@ final class SellePageLocationCell: UITableViewCell {
     private let additionalAddressLabel: UILabel = {
         let label = UILabel()
         label.textColor = .gray
-        label.font = UIFont.systemFont(ofSize: Constants.subtitleFontSize)
+        label.font = .systemFont(ofSize: Constants.subtitleFontSize, weight: .regular)
         label.textAlignment = .left
-        label.numberOfLines = Constants.numberOfLines
         label.lineBreakMode = .byTruncatingTail
         return label
     }()
     
-    private lazy var arrowButton: UIButton = {
+    private let arrowButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: Constants.arrowImage), for: .normal)
         return button
@@ -53,7 +49,7 @@ final class SellePageLocationCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        self.selectionStyle = UITableViewCell.SelectionStyle.none
+        selectionStyle = .none
         setupSubview()
         setupConstraints()
     }
@@ -86,13 +82,13 @@ final class SellePageLocationCell: UITableViewCell {
         mainAddressLabel.snp.makeConstraints {
             $0.left.equalTo(locationLogo.snp.right).offset(16)
             $0.top.equalToSuperview().offset(6)
-            $0.right.equalTo(arrowButton.snp.left).offset(-24)
+            $0.right.equalTo(arrowButton.snp.left).offset(-22)
         }
         
         additionalAddressLabel.snp.makeConstraints {
             $0.left.equalTo(locationLogo.snp.right).offset(16)
             $0.top.equalTo(mainAddressLabel.snp.bottom).offset(4)
-            $0.right.equalTo(arrowButton.snp.left).offset(-24)
+            $0.right.equalTo(arrowButton.snp.left).offset(-22)
             $0.bottom.equalToSuperview().offset(-6)
         }
         
