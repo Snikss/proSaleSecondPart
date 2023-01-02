@@ -15,6 +15,9 @@
 		75B62F3A2955746C007A7C6C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B62F392955746C007A7C6C /* Color.swift */; };
 		75B62F442955B57C007A7C6C /* CabinetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B62F432955B57C007A7C6C /* CabinetType.swift */; };
 		75D86F14295C0A4A00E1372E /* SellerPageScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D86F13295C0A3500E1372E /* SellerPageScheduleCell.swift */; };
+		75D9AFD8295EF690005369BE /* SellerAdvertsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9AFD7295EF690005369BE /* SellerAdvertsCell.swift */; };
+		75D9AFDA29618809005369BE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9AFD9296187C6005369BE /* Model.swift */; };
+		75D9AFDC29618891005369BE /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9AFDB29618891005369BE /* CategoryCell.swift */; };
 		A2ED4D66295496F700AA7099 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED4D65295496F700AA7099 /* AppDelegate.swift */; };
 		A2ED4D68295496F700AA7099 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED4D67295496F700AA7099 /* SceneDelegate.swift */; };
 		A2ED4D6A295496F700AA7099 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED4D69295496F700AA7099 /* StartViewController.swift */; };
@@ -36,6 +39,9 @@
 		75B62F392955746C007A7C6C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		75B62F432955B57C007A7C6C /* CabinetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabinetType.swift; sourceTree = "<group>"; };
 		75D86F13295C0A3500E1372E /* SellerPageScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerPageScheduleCell.swift; sourceTree = "<group>"; };
+		75D9AFD7295EF690005369BE /* SellerAdvertsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerAdvertsCell.swift; sourceTree = "<group>"; };
+		75D9AFD9296187C6005369BE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		75D9AFDB29618891005369BE /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		A2ED4D62295496F700AA7099 /* ProSaleSecondPart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProSaleSecondPart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2ED4D65295496F700AA7099 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2ED4D67295496F700AA7099 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +73,16 @@
 				75B62F392955746C007A7C6C /* Color.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		75D9AFDD29618E2A005369BE /* 2 part */ = {
+			isa = PBXGroup;
+			children = (
+				75D9AFDB29618891005369BE /* CategoryCell.swift */,
+				75D9AFD7295EF690005369BE /* SellerAdvertsCell.swift */,
+				75D9AFD9296187C6005369BE /* Model.swift */,
+			);
+			path = "2 part";
 			sourceTree = "<group>";
 		};
 		A2ED4D59295496F700AA7099 = {
@@ -107,6 +123,7 @@
 				A2ED4D8029549B1100AA7099 /* TimurFirstVC.swift */,
 				75B62F312954AB86007A7C6C /* SellerInfoTableViewCell.swift */,
 				755AA1AB295AD4AC0006CD24 /* SellerPageInfoCell.swift */,
+				75D9AFDD29618E2A005369BE /* 2 part */,
 				75823641295BFBB700A424C7 /* SellerPageLocationCell.swift */,
 				75D86F13295C0A3500E1372E /* SellerPageScheduleCell.swift */,
 				75B62F332954AF29007A7C6C /* SellerModel.swift */,
@@ -201,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75D9AFDA29618809005369BE /* Model.swift in Sources */,
 				75B62F342954AF29007A7C6C /* SellerModel.swift in Sources */,
 				75B62F322954AB86007A7C6C /* SellerInfoTableViewCell.swift in Sources */,
 				755AA1AC295AD4AC0006CD24 /* SellerPageInfoCell.swift in Sources */,
@@ -211,6 +229,8 @@
 				757226152959EF0D00A2552D /* UIView+RoundSelectCorners.m in Sources */,
 				75823642295BFBB700A424C7 /* SellerPageLocationCell.swift in Sources */,
 				75B62F3A2955746C007A7C6C /* Color.swift in Sources */,
+				75D9AFDC29618891005369BE /* CategoryCell.swift in Sources */,
+				75D9AFD8295EF690005369BE /* SellerAdvertsCell.swift in Sources */,
 				75D86F14295C0A4A00E1372E /* SellerPageScheduleCell.swift in Sources */,
 				A2ED4D68295496F700AA7099 /* SceneDelegate.swift in Sources */,
 				A2ED4D7F29549AED00AA7099 /* NikolaiFirstVC.swift in Sources */,

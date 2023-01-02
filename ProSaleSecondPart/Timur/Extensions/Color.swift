@@ -13,6 +13,7 @@ import UIKit
     @objc public static let bluePrimary = UIColor(hexString: "#2A81DD")
     @objc public static let grayLightest = UIColor(hexString: "#d4d4da")
     @objc public static let gray = UIColor(hexString: "#888b94")
+    @objc public static let blueLighter = UIColor(hexString: "#D6ECFB")
 }
 
 extension UIColor {

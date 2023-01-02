@@ -63,15 +63,15 @@ final class SellerPageScheduleCell: UITableViewCell {
     
     private func setupConstraints() {
         workIndicator.snp.makeConstraints {
-            $0.left.equalToSuperview().offset(16)
+            $0.left.equalToSuperview().offset(24)
             $0.centerY.equalToSuperview()
-            $0.width.height.equalTo(24)
+            $0.width.height.equalTo(8)
         }
         
         titleLabel.snp.makeConstraints {
             $0.top.equalToSuperview().offset(10)
-            $0.left.equalTo(workIndicator.snp.right).offset(16)
-            $0.right.equalTo(arrowButton.snp.left).offset(-22)
+            $0.left.equalTo(workIndicator.snp.right).offset(24)
+            $0.right.equalTo(arrowButton.snp.left).offset(-24)
             $0.bottom.equalToSuperview().offset(-10)
         }
         

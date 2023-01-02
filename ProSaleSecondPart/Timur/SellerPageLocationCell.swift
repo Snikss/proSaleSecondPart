@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class SellePageLocationCell: UITableViewCell {
+final class SellerPageLocationCell: UITableViewCell {
     private enum Constants {
         static let arrowImage = "light_bracket"
         static let locationLogo = "location_logo"
@@ -74,19 +74,20 @@ final class SellePageLocationCell: UITableViewCell {
     
     private func setupConstraints() {
         locationLogo.snp.makeConstraints {
-            $0.left.equalToSuperview().offset(16)
+            $0.left.equalToSuperview().offset(22)
             $0.centerY.equalToSuperview()
-            $0.width.height.equalTo(24)
+            $0.height.equalTo(18)
+            $0.width.equalTo(12)
         }
         
         mainAddressLabel.snp.makeConstraints {
-            $0.left.equalTo(locationLogo.snp.right).offset(16)
+            $0.left.equalTo(locationLogo.snp.right).offset(22)
             $0.top.equalToSuperview().offset(6)
             $0.right.equalTo(arrowButton.snp.left).offset(-22)
         }
         
         additionalAddressLabel.snp.makeConstraints {
-            $0.left.equalTo(locationLogo.snp.right).offset(16)
+            $0.left.equalTo(locationLogo.snp.right).offset(22)
             $0.top.equalTo(mainAddressLabel.snp.bottom).offset(4)
             $0.right.equalTo(arrowButton.snp.left).offset(-22)
             $0.bottom.equalToSuperview().offset(-6)
