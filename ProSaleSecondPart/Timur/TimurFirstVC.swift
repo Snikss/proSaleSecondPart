@@ -21,7 +21,7 @@ final class TimurFirstVC: UIViewController {
         tableView.separatorStyle = .none
         tableView.register(SellerPageLocationCell.self, forCellReuseIdentifier: Constants.cellId)
         tableView.register(SellerPageScheduleCell.self, forCellReuseIdentifier: Constants.sellerPageScheduleCell)
-        tableView.register(SellerAdvertsCell.self, forCellReuseIdentifier: Constants.sellerAdvertsCell)
+        tableView.register(SellerPageAdvertHeaderCell.self, forCellReuseIdentifier: Constants.sellerAdvertsCell)
         
         return tableView
     }()
@@ -62,8 +62,7 @@ extension TimurFirstVC: UITableViewDataSource, UITableViewDelegate {
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.sellerAdvertsCell,
-                                                     for: indexPath) as! SellerAdvertsCell
-            cell.configure(name: "Объявления продавца")
+                                                     for: indexPath) as! SellerPageAdvertHeaderCell
             return cell
         }
     }

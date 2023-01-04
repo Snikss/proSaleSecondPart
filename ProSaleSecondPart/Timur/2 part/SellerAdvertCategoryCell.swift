@@ -7,22 +7,21 @@
 
 import Foundation
 
-final class CategoryCell: UICollectionViewCell {
+final class SellerAdvertCategoryCell: UICollectionViewCell {
+    private enum Constants {
+        static let fontSize: CGFloat = 16
+    }
     
     override var isSelected: Bool {
         didSet {
-            if isSelected { // Selected cell
-                self.backgroundColor = Color.blueLighter
-            } else { // Normal cell
-                self.backgroundColor = .white
-           }
+            self.backgroundColor = isSelected ? Color.blueLighter : .white
         }
     }
     
     private let categoryName: UILabel = {
         let label = UILabel()
         label.textColor = .black
-        label.font = .systemFont(ofSize: 16, weight: .regular)
+        label.font = .systemFont(ofSize: Constants.fontSize, weight: .regular)
         label.textAlignment = .left
         label.lineBreakMode = .byTruncatingTail
         return label
@@ -31,7 +30,7 @@ final class CategoryCell: UICollectionViewCell {
     private let numberOfAdverts: UILabel = {
         let label = UILabel()
         label.textColor = .gray
-        label.font = .systemFont(ofSize: 16, weight: .regular)
+        label.font = .systemFont(ofSize: Constants.fontSize, weight: .regular)
         label.textAlignment = .left
         label.lineBreakMode = .byTruncatingTail
         return label
@@ -42,7 +41,7 @@ final class CategoryCell: UICollectionViewCell {
         
         self.layer.cornerRadius = 8
         self.layer.borderWidth = 1
-        self.layer.borderColor = CGColor(gray: 0.8, alpha: 1)
+        self.layer.borderColor = Color.whiteDarkest.cgColor
         
         setupSubview()
         setupConstraints()
